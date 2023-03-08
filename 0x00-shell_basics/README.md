@@ -25,8 +25,7 @@
 #### 18. Life is a series of commas, not periods
 #### 19. File type: School
 <br>
-[(Back to top)](#table-of-contents)
-<br>
+
 <hr>
 
 
