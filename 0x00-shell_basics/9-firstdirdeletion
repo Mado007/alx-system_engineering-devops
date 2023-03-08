@@ -1,3 +1,3 @@
 #!/bin/bash
 rm -r /tmp/my_first_directory
-#we can add -f too for force delete to be like this rm -rf {the file or dirictory name}
+
