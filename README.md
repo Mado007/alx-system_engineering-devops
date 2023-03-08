@@ -1,5 +1,6 @@
-__#Repo for 0x00. Shell, basics task :-__
-##1.shell basics
-##2.shell permissions
-##3.shell redirections
-##4.shell variable expansions
+__Repo for 0x00. Shell, basics task :-__
+<br>
+_1.shell basics<br>
+2.shell permissions<br>
+3.shell redirections<br>
+4.shell variable expansions_
