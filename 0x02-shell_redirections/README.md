@@ -25,14 +25,14 @@
 21. esreveR
 22. DJ Cut Killer <br> 
 
-[(Back to top)](#table-of-contents) <br>
+[(Back to top)](#) <br>
 ## <p align="center">  [**_📄📄 Advanced Tasks_**](https://intranet.alxswe.com/projects/208) </p> 
 <hr>
 24. Empty casks make the most noise<br>
 25. Acrostic<br>
 26. The biggest fan <br>
 
-[(Back to top)](#table-of-contents) <br>
+[(Back to top)](#) <br>
 
 
 
