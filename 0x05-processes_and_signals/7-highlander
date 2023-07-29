@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Bash script to displays
+# infinity and beyond indefinitely , With a sleep 2
+counter=0
+while [ $counter -ge 0 ];
+do
+echo "To infinity and beyond"
+sleep 2
+trap 'echo "I am invincible!!!"' SIGTERM
+done
