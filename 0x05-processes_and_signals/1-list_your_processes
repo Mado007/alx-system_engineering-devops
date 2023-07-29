@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#script to list all processes with user oriented and forest view
+ps axuf
