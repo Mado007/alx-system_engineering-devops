@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# locat host on local poart 98
+
+nc -l localhost 98
