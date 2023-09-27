@@ -1,5 +1,3 @@
 #!/usr/bin/env bash
 # Debugging the issue with the web server 0
-# docker exec -i "$DOCKER_CONT_ID" /bin/bash -c "sudo service apache2 start"
-echo "ServerName localhost" >> /etc/apache2.conf
-sudo service apache2 start
+service apache2 start
