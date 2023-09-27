@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# to make redirection Configuration
+# The redirection must be a “301 Moved Permanently”
+# The redirection must redirect to https://www.youtube.com/watch?v=QH2-TGUlwu4
+
+apt-get update
+apt-get install -y nginx
+
+mkdir /etc/nginx/html
+touch /etc/nginx/html/index.html
+echo "Hello Holberton School" > /etc/nginx/html/index.html
+printf %s "server {
+    listen 80;
+    listen [::]:80 default_server;
+    root   /etc/nginx/html;
+    index  index.html index.htm;
+    location /redirect_me {
+        return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
+    }
+}" > /etc/nginx/sites-available/default
+
+sudo service nginx restart
