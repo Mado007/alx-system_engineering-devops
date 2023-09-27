@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# transfer to a server $file_path $user_naame@$ip:$dir_path $ssh_path
+# transfer to a server
 
 if [ "$#" -lt 3 ]
 then
@@ -12,7 +12,7 @@ user_name="$3"
 ssh_path="$4"
 if [ "$#" -lt 4 ]
 then
-    scp  -o StrictHostKeyChecking=no "$1" "$3@$2":~/
+    scp -o StrictHostKeyChecking=no -i "$4" "$1" "$3"@"$2":~/
 else
-    scp -i "$ssh_path" -o StrictHostKeyChecking=no "$1" "$3@$2":~/
-fi
+    scp -o StrictHostKeyChecking=no "$1" "$3"@"$2":~/
+fi;
