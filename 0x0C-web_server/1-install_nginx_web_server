@@ -2,13 +2,9 @@
 # install nginx on remote server
 # allows incoming HTTP traffic through the firewall using ufw
 # configure Nginx to serve a custom page /var/www/html/index.html
-# Using the service nginx restart command
-# Not accepting connections on port 8080, TCP traffic is not allowed on port 8080
-# Not running on port 80, Nginx is not listening on port 80
 # Not running as nginx user, Nginx is not running as nginx user
 
-sudo apt-get -y update
+sudo apt-get update
 sudo apt-get -y install nginx
-sudo sed -i 's/listen 80 default_server;/listen 80;/g' /etc/nginx/sites-available/default
-echo "<html><body>Hello World!</body></html>" > /var/www/html/index.html
-sudo service nginx start
+echo 'Hello World!' > /var/www/html/index.html
+service nginx start
