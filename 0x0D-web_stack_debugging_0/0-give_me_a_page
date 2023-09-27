@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Debugging the issue with the web server 0
+# DOCKER_CONT_ID=$(docker ps | grep 'holbertonschool/265-0' | cut -d ' ' -f1)
+# 	/bin/bash -c "echo 'Hello Holberton' > /etc/apache2.conf"
+# docker exec -i "$DOCKER_CONT_ID" /bin/bash -c "service apache2 start"
+echo "Hello Holberton" >> /etc/apache2.conf
+service apache2 start
