@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 # Debugging the issue with the web server 0
-echo "ServerName localhost" >> /etc/apache2.conf
-service apache2 start
+echo "Hello Holberton" > /var/www/html/index.html
+sudo service apache2 status
+service apache2 restart
