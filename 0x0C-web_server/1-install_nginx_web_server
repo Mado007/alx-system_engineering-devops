@@ -13,6 +13,6 @@ sudo apt-get -y install nginx
 ufw allow 'Nginx HTTP'
 sudo sed -i 's/listen 80 default_server;/listen 80;/g' /etc/nginx/sites-available/default
 
-echo "<html><body>Hello World!</body></html>" | sudo tee /var/www/html/index.html
+echo "<html><body>Hello World!</body></html>" > /var/www/html/index.html
 
-sudo service nginx restart
+sudo service nginx start
