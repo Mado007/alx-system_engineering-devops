@@ -9,5 +9,5 @@
 
 sudo apt-get -y update
 sudo apt-get -y install nginx
-echo "<html><body>Hello World!</body></html>" > /var/www/html/index.html
+echo "Hello World!" > /var/www/html/index.html
 sudo service nginx start
