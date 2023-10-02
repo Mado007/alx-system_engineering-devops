@@ -1,0 +1,6 @@
+#!/usr/bin/env bash                                                                                                                                       
+# Write 0-nginx_likes_port_80 so that it configures a brand new Ubuntu machine to the requirements asked in this task
+cd /etc/nginx/sites-enabled/ || exit;                                                                                                                                                                                                                                                        
+rm default;                                                                                                                                                                                                                                           
+ln -s /etc/nginx/sites-available/default default;                                                                                                                                                                                                                                               
+service nginx restart 
