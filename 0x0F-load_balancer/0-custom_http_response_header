@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
 # this Script configures Nginx server with a custom header
-apt-get -y update
-apt-get -y install nginx
-echo "Hello World!" > /var/www/html/index.nginx-debian.html
-sudo chown  $USER:$USER /var/www/error/
-echo "Ceci n'est pas une page" > /var/www/error/404.html
-sudo chown  $USER:$USER /etc/nginx/sites-available/
-sed -i '/server_name _/a location /redirect_me { rewrite ^ https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent; }' /etc/nginx/sites-available/default
-sed -i '/server_name _/a error_page 404 /404.html; location = /404.html {root /var/www/error/; internal; }' /etc/nginx/sites-available/default
-# in the server 1 also 2 this down
-sudo sed -i "/server_name _/a add_header X-Served-By $HOSTNAME;" /etc/nginx/sites-available/default
-service nginx start
+sudo apt-get -y update
+if ! [ -x "$(command -v nginx)" ]; then
+  sudo apt-get -y install nginx
+fi
+echo "Ceci n'est pas une page" | sudo tee /var/www/error/404.html > /dev/null
+custom_config="add_header X-Served-By \$hostname;"
+sudo sed -i "/server_name _/a $custom_config" /etc/nginx/sites-available/default
+if sudo systemctl is-active --quiet nginx; then
+    sudo systemctl restart nginx
+else
+    sudo systemctl start nginx
+fi
