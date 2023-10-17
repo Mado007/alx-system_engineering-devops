@@ -10,11 +10,14 @@ fi
 db_user="root"
 db_password="$1"
 
+# Directory to store the backup file
+backup_dir=$(pwd)
+
 # Backup file name
-backup_file="backup.sql"
+backup_file="$backup_dir/backup.sql"
 
 # Compressed archive name format
-archive_name="$(date +'%d-%m-%Y').tar.gz"
+archive_name=$(date +'%d-%m-%Y').tar.gz
 
 # MySQL dump command
 mysqldump --user="$db_user" --password="$db_password" --all-databases > "$backup_file"
